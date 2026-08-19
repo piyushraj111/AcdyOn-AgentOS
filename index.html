@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
+<html lang="en" class="dark scroll-smooth w-full overflow-x-hidden">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>AcdyOn AgentOS — Autonomous AI Workflow Engine</title>
   
   <!-- Tailwind CSS CDN -->
@@ -55,34 +55,34 @@
     }
   </script>
 </head>
-<body class="bg-slate-50 dark:bg-surface-bg text-slate-800 dark:text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white min-h-screen overflow-x-hidden m-0 p-0 transition-colors duration-300">
+<body class="bg-slate-50 dark:bg-surface-bg text-slate-800 dark:text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white min-h-screen w-full max-w-full overflow-x-hidden m-0 p-0 transition-colors duration-300">
 
   <!-- Dual-Theme Interactive Canvas Star Layer -->
-  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+  <div class="fixed inset-0 pointer-events-none z-0 w-full h-full overflow-hidden">
     <canvas id="star-canvas" class="absolute inset-0 w-full h-full opacity-100 transition-opacity duration-500"></canvas>
-    <div class="absolute -top-[12%] left-1/2 -translate-x-1/2 w-[1000px] h-[550px] bg-gradient-to-b from-indigo-500/15 dark:from-indigo-600/20 via-sky-400/10 dark:via-sky-500/10 to-transparent blur-[140px] rounded-full"></div>
-    <div class="absolute top-[40%] -left-[12%] w-[700px] h-[700px] bg-gradient-to-tr from-brand-500/10 dark:from-brand-600/15 to-transparent blur-[160px] rounded-full"></div>
+    <div class="absolute -top-[12%] left-1/2 -translate-x-1/2 w-full max-w-[800px] h-[450px] bg-gradient-to-b from-indigo-500/15 dark:from-indigo-600/20 via-sky-400/10 dark:via-sky-500/10 to-transparent blur-[120px] rounded-full pointer-events-none"></div>
+    <div class="absolute top-[40%] -left-[10%] w-[90vw] max-w-[500px] h-[500px] bg-gradient-to-tr from-brand-500/10 dark:from-brand-600/15 to-transparent blur-[140px] rounded-full pointer-events-none"></div>
   </div>
 
   <!-- Main Wrapper -->
-  <div class="relative z-10 flex flex-col min-h-screen">
+  <div class="relative z-10 flex flex-col min-h-screen w-full max-w-full overflow-x-hidden">
     
-    <!-- Full-Width Highlighted Glassmorphic Navbar -->
-    <header class="sticky top-0 z-40 backdrop-blur-2xl border-b border-indigo-500/20 dark:border-indigo-500/30 bg-white/90 dark:bg-[#090e1a]/90 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.5)] transition-colors duration-300">
-      <div class="w-full px-6 sm:px-10 lg:px-12 h-20 flex items-center justify-between">
+    <!-- Full-Width Glassmorphic Navbar -->
+    <header class="sticky top-0 z-40 w-full backdrop-blur-2xl border-b border-indigo-500/20 dark:border-indigo-500/30 bg-white/90 dark:bg-[#090e1a]/90 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.5)] transition-colors duration-300">
+      <div class="w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 h-16 sm:h-20 flex items-center justify-between">
         
-        <!-- Left Corner: Brand Logo with Halo Glow -->
-        <div class="flex items-center gap-3.5 flex-shrink-0">
-          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-500 via-indigo-600 to-brand-accent flex items-center justify-center shadow-[0_0_20px_rgba(99,102,241,0.5)] ring-1 ring-white/30">
-            <i data-lucide="cpu" class="w-6 h-6 text-white"></i>
+        <!-- Brand Logo -->
+        <div class="flex items-center gap-2.5 sm:gap-3.5 flex-shrink-0">
+          <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-brand-500 via-indigo-600 to-brand-accent flex items-center justify-center shadow-[0_0_20px_rgba(99,102,241,0.5)] ring-1 ring-white/30">
+            <i data-lucide="cpu" class="w-5 h-5 sm:w-6 sm:h-6 text-white"></i>
           </div>
-          <div class="flex items-center gap-2">
-            <span class="font-bold tracking-tight text-slate-900 dark:text-white text-2xl">AcdyOn</span>
-            <span class="text-brand-600 dark:text-brand-accent font-mono text-xs font-bold px-2 py-0.5 rounded-lg bg-indigo-50 dark:bg-brand-500/20 border border-indigo-200 dark:border-brand-500/40 shadow-sm">AgentOS</span>
+          <div class="flex items-center gap-1.5 sm:gap-2">
+            <span class="font-bold tracking-tight text-slate-900 dark:text-white text-xl sm:text-2xl">AcdyOn</span>
+            <span class="text-brand-600 dark:text-brand-accent font-mono text-[10px] sm:text-xs font-bold px-1.5 sm:px-2 py-0.5 rounded-lg bg-indigo-50 dark:bg-brand-500/20 border border-indigo-200 dark:border-brand-500/40 shadow-sm">AgentOS</span>
           </div>
         </div>
 
-        <!-- Center Nav: High-Contrast Illuminated Glass Pills -->
+        <!-- Center Nav: Illuminated Glass Pills -->
         <nav class="hidden lg:flex items-center justify-center flex-1 mx-8 gap-3.5">
           <a href="#interactive-suite" class="group relative inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold tracking-wide text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-[#12192e] border border-slate-200 dark:border-[#233054] hover:border-indigo-400 hover:text-indigo-600 dark:hover:text-white transition-all duration-200 hover:shadow-[0_0_15px_rgba(99,102,241,0.25)] hover:-translate-y-0.5">
             <i data-lucide="play-circle" class="w-4 h-4 text-indigo-500 dark:text-indigo-400 group-hover:scale-110 transition-transform"></i>
@@ -105,9 +105,9 @@
           </a>
         </nav>
 
-        <!-- Right Corner: High-Contrast Actions & Button Glow -->
-        <div class="flex items-center gap-3 sm:gap-4 flex-shrink-0">
-          <button id="theme-toggle" onclick="toggleTheme()" title="Toggle Light/Dark Theme" class="p-2.5 rounded-xl bg-slate-100 dark:bg-[#12192e] border border-slate-200 dark:border-[#233054] text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-amber-300 transition-all duration-200 hover:-translate-y-0.5 shadow-sm">
+        <!-- Right Header Actions -->
+        <div class="flex items-center gap-2.5 sm:gap-4 flex-shrink-0">
+          <button id="theme-toggle" onclick="toggleTheme()" title="Toggle Light/Dark Theme" class="p-2 sm:p-2.5 rounded-xl bg-slate-100 dark:bg-[#12192e] border border-slate-200 dark:border-[#233054] text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-amber-300 transition-all duration-200 hover:-translate-y-0.5 shadow-sm">
             <i id="theme-icon" data-lucide="moon" class="w-4 h-4"></i>
           </button>
 
@@ -116,7 +116,7 @@
             Ctrl+K Debug
           </button>
           
-          <a href="#register" class="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 text-xs sm:text-sm font-bold tracking-wide text-white bg-gradient-to-r from-brand-600 via-indigo-600 to-brand-500 rounded-xl transition-all duration-200 hover:brightness-110 shadow-[0_0_20px_rgba(99,102,241,0.45)] hover:-translate-y-0.5 border border-brand-400/40">
+          <a href="#register" class="inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-bold tracking-wide text-white bg-gradient-to-r from-brand-600 via-indigo-600 to-brand-500 rounded-xl transition-all duration-200 hover:brightness-110 shadow-[0_0_20px_rgba(99,102,241,0.45)] hover:-translate-y-0.5 border border-brand-400/40">
             Get Access
           </a>
         </div>
@@ -125,32 +125,32 @@
     </header>
 
     <!-- Hero Section -->
-    <main class="flex-grow">
-      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 pb-16 text-center">
+    <main class="flex-grow w-full max-w-full overflow-x-hidden">
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-24 pb-14 text-center">
         
-        <!-- SLA Tag -->
-        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white dark:bg-surface-card border border-slate-200 dark:border-surface-border text-xs sm:text-sm text-slate-700 dark:text-slate-200 mb-8 shadow-sm dark:shadow-md">
-          <span class="flex h-2.5 w-2.5 relative">
+        <!-- SLA Tag (Fully Mobile Wrapped) -->
+        <div class="inline-flex flex-wrap items-center justify-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-2xl sm:rounded-full bg-white dark:bg-surface-card border border-slate-200 dark:border-surface-border text-xs sm:text-sm text-slate-700 dark:text-slate-200 mb-6 sm:mb-8 shadow-sm dark:shadow-md max-w-full">
+          <span class="flex h-2.5 w-2.5 relative flex-shrink-0">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-500 dark:bg-brand-accent opacity-75"></span>
             <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-600 dark:bg-brand-accent"></span>
           </span>
-          <span class="font-medium">Autonomous Agent Orchestration Engine</span>
-          <span class="text-slate-300 dark:text-surface-border">|</span>
-          <span class="text-brand-600 dark:text-brand-accent font-mono font-semibold">Sub-0.5ms Deterministic SLA</span>
+          <span class="font-medium text-center">Autonomous Agent Engine</span>
+          <span class="hidden sm:inline text-slate-300 dark:text-surface-border">|</span>
+          <span class="text-brand-600 dark:text-brand-accent font-mono font-semibold">Sub-0.5ms SLA</span>
         </div>
 
-        <!-- Main Headline with Animated Shifting Glow -->
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white max-w-5xl mx-auto leading-[1.14]">
+        <!-- Main Headline -->
+        <h1 class="text-3xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white max-w-5xl mx-auto leading-[1.2] sm:leading-[1.14]">
           Deploy autonomous AI agents that <span class="text-shimmer-glow inline-block">execute, not just chat.</span>
         </h1>
 
         <!-- Subheadline -->
-        <p class="mt-8 text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed font-normal">
-          A high-throughput runtime for deterministic agent workflows, real-time tool calling, and resilient telemetry ingestion. Built to withstand aggressive edge firewalls and scale without synthetic bloat.
+        <p class="mt-6 sm:mt-8 text-base sm:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed font-normal px-2">
+          A high-throughput runtime for deterministic agent workflows, real-time tool calling, and resilient telemetry ingestion. Built to scale without synthetic bloat.
         </p>
 
-        <!-- CTA Buttons -->
-        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 max-w-lg mx-auto">
+        <!-- CTA Buttons with Auto-Scroll -->
+        <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3.5 max-w-lg mx-auto w-full px-2">
           <button onclick="triggerSimulatedRun()" class="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3.5 rounded-xl text-base font-semibold text-white bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 transition duration-200 shadow-xl shadow-brand-600/35 border border-brand-400/25 hover:-translate-y-0.5">
             <i data-lucide="play" class="w-5 h-5 mr-2.5 fill-white"></i>
             Run Live Agent Test
@@ -162,32 +162,32 @@
         </div>
 
         <!-- Metric Cards Grid -->
-        <div class="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto text-left">
-          <div class="p-6 rounded-2xl bg-white dark:bg-surface-card border border-slate-200 dark:border-surface-border shadow-md dark:shadow-lg hover:border-brand-500/50 transition duration-300">
+        <div class="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 max-w-5xl mx-auto text-left">
+          <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-surface-card border border-slate-200 dark:border-surface-border shadow-md dark:shadow-lg hover:border-brand-500/50 transition duration-300">
             <div class="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-500 dark:text-surface-muted">Execution Latency</div>
-            <div class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-mono mt-1.5">0.42 ms</div>
-            <div class="text-sm text-emerald-600 dark:text-emerald-400 flex items-center gap-1.5 mt-2.5 font-semibold">
+            <div class="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-mono mt-1.5">0.42 ms</div>
+            <div class="text-xs sm:text-sm text-emerald-600 dark:text-emerald-400 flex items-center gap-1.5 mt-2 font-semibold">
               <i data-lucide="zap" class="w-4 h-4"></i> Inline eBPF probe
             </div>
           </div>
-          <div class="p-6 rounded-2xl bg-white dark:bg-surface-card border border-slate-200 dark:border-surface-border shadow-md dark:shadow-lg hover:border-brand-500/50 transition duration-300">
+          <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-surface-card border border-slate-200 dark:border-surface-border shadow-md dark:shadow-lg hover:border-brand-500/50 transition duration-300">
             <div class="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-500 dark:text-surface-muted">Vector Fingerprints</div>
-            <div class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-mono mt-1.5">380+ Vectors</div>
-            <div class="text-sm text-brand-600 dark:text-brand-accent flex items-center gap-1.5 mt-2.5 font-semibold">
+            <div class="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-mono mt-1.5">380+ Vectors</div>
+            <div class="text-xs sm:text-sm text-brand-600 dark:text-brand-accent flex items-center gap-1.5 mt-2 font-semibold">
               <i data-lucide="shield" class="w-4 h-4"></i> TLS + Canvas hooks
             </div>
           </div>
-          <div class="p-6 rounded-2xl bg-white dark:bg-surface-card border border-slate-200 dark:border-surface-border shadow-md dark:shadow-lg hover:border-brand-500/50 transition duration-300">
+          <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-surface-card border border-slate-200 dark:border-surface-border shadow-md dark:shadow-lg hover:border-brand-500/50 transition duration-300">
             <div class="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-500 dark:text-surface-muted">Runtime Overhead</div>
-            <div class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-mono mt-1.5">&lt; 12 MB</div>
-            <div class="text-sm text-emerald-600 dark:text-emerald-400 flex items-center gap-1.5 mt-2.5 font-semibold">
+            <div class="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-mono mt-1.5">&lt; 12 MB</div>
+            <div class="text-xs sm:text-sm text-emerald-600 dark:text-emerald-400 flex items-center gap-1.5 mt-2 font-semibold">
               <i data-lucide="activity" class="w-4 h-4"></i> Zero daemon lag
             </div>
           </div>
-          <div class="p-6 rounded-2xl bg-white dark:bg-surface-card border border-slate-200 dark:border-surface-border shadow-md dark:shadow-lg hover:border-brand-500/50 transition duration-300">
+          <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-surface-card border border-slate-200 dark:border-surface-border shadow-md dark:shadow-lg hover:border-brand-500/50 transition duration-300">
             <div class="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-500 dark:text-surface-muted">Resilience SLA</div>
-            <div class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-mono mt-1.5">99.98%</div>
-            <div class="text-sm text-indigo-600 dark:text-indigo-400 flex items-center gap-1.5 mt-2.5 font-semibold">
+            <div class="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-mono mt-1.5">99.98%</div>
+            <div class="text-xs sm:text-sm text-indigo-600 dark:text-indigo-400 flex items-center gap-1.5 mt-2 font-semibold">
               <i data-lucide="git-branch" class="w-4 h-4"></i> Auto-failover state
             </div>
           </div>
@@ -195,68 +195,68 @@
       </section>
 
       <!-- LIVE INTERACTIVE AGENT SUITE -->
-      <section id="interactive-suite" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <section id="interactive-suite" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 scroll-mt-24">
         <div class="rounded-3xl border border-slate-200 dark:border-surface-border bg-white dark:bg-surface-card shadow-xl dark:shadow-2xl overflow-hidden ring-1 ring-slate-900/5 dark:ring-white/10 transition-colors duration-300">
           
           <!-- Terminal Header -->
-          <div class="px-6 py-4 bg-slate-900 dark:bg-[#0e1424] border-b border-slate-800 dark:border-surface-border flex flex-wrap items-center justify-between gap-3">
+          <div class="px-4 sm:px-6 py-3.5 sm:py-4 bg-slate-900 dark:bg-[#0e1424] border-b border-slate-800 dark:border-surface-border flex flex-wrap items-center justify-between gap-3">
             <div class="flex items-center gap-2.5">
-              <div class="flex gap-2">
-                <div class="w-3.5 h-3.5 rounded-full bg-rose-500/90"></div>
-                <div class="w-3.5 h-3.5 rounded-full bg-amber-500/90"></div>
-                <div class="w-3.5 h-3.5 rounded-full bg-emerald-500/90"></div>
+              <div class="flex gap-1.5 sm:gap-2">
+                <div class="w-3 h-3 rounded-full bg-rose-500/90"></div>
+                <div class="w-3 h-3 rounded-full bg-amber-500/90"></div>
+                <div class="w-3 h-3 rounded-full bg-emerald-500/90"></div>
               </div>
-              <span class="text-sm font-mono text-slate-300 ml-3 font-semibold">agentos://runtime-session-prod-01</span>
+              <span class="text-xs sm:text-sm font-mono text-slate-300 ml-2 sm:ml-3 font-semibold">agentos://prod-session</span>
             </div>
             
-            <button onclick="triggerSimulatedRun()" id="run-btn" class="relative overflow-hidden px-4 py-2 rounded-xl bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs sm:text-sm font-mono font-bold flex items-center gap-2 hover:bg-emerald-500/30 transition shadow-sm min-w-[160px] justify-center">
+            <button onclick="triggerSimulatedRun()" id="run-btn" class="relative overflow-hidden px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs sm:text-sm font-mono font-bold flex items-center gap-2 hover:bg-emerald-500/30 transition shadow-sm justify-center">
               <span id="run-icon-wrapper" class="flex items-center">
-                <i data-lucide="play" id="run-icon" class="w-4 h-4 fill-emerald-300"></i>
+                <i data-lucide="play" id="run-icon" class="w-3.5 h-3.5 fill-emerald-300"></i>
               </span>
               <span id="run-text">Execute Workflow</span>
             </button>
           </div>
 
           <!-- Pipeline Stages -->
-          <div class="p-6 sm:p-8">
-            <div class="text-base sm:text-lg font-extrabold tracking-tight text-slate-900 dark:text-white mb-5 flex items-center justify-between">
+          <div class="p-5 sm:p-8">
+            <div class="text-base sm:text-lg font-extrabold tracking-tight text-slate-900 dark:text-white mb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
               <span>Pipeline Lifecycle Status</span>
-              <span class="text-xs sm:text-sm font-mono text-brand-600 dark:text-brand-accent font-bold">Deterministic State Machine</span>
+              <span class="text-xs font-mono text-brand-600 dark:text-brand-accent font-bold">Deterministic State Machine</span>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div id="step-1" class="p-6 rounded-2xl bg-slate-50 dark:bg-[#090d16] border border-brand-500/50 transition-all duration-300">
-                <div class="flex items-center justify-between mb-3.5">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
+              <div id="step-1" class="p-5 sm:p-6 rounded-2xl bg-slate-50 dark:bg-[#090d16] border border-brand-500/50 transition-all duration-300">
+                <div class="flex items-center justify-between mb-3">
                   <span class="text-xs sm:text-sm font-mono text-brand-600 dark:text-brand-accent font-bold">STEP 01</span>
                   <span id="step-1-status" class="text-xs sm:text-sm font-mono text-emerald-600 dark:text-emerald-400 flex items-center gap-1 font-bold">
-                    <i data-lucide="check-circle" class="w-4 h-4"></i> Ready
+                    <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Ready
                   </span>
                 </div>
-                <div class="font-extrabold text-lg text-slate-900 dark:text-white">Data Ingestion & Scrubbing</div>
-                <p class="text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed font-normal">Paces upstream requests and rotates browser fingerprints to evade bot barriers.</p>
+                <div class="font-extrabold text-base sm:text-lg text-slate-900 dark:text-white">Data Ingestion & Scrubbing</div>
+                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed font-normal">Paces upstream requests and rotates browser fingerprints to evade bot barriers.</p>
               </div>
 
-              <div id="step-2" class="p-6 rounded-2xl bg-slate-50 dark:bg-[#090d16] border border-slate-200 dark:border-surface-border transition-all duration-300">
-                <div class="flex items-center justify-between mb-3.5">
+              <div id="step-2" class="p-5 sm:p-6 rounded-2xl bg-slate-50 dark:bg-[#090d16] border border-slate-200 dark:border-surface-border transition-all duration-300">
+                <div class="flex items-center justify-between mb-3">
                   <span class="text-xs sm:text-sm font-mono text-slate-500 dark:text-slate-400 font-bold">STEP 02</span>
                   <span id="step-2-status" class="text-xs sm:text-sm font-mono text-slate-500 dark:text-slate-400 font-bold">Standby</span>
                 </div>
-                <div class="font-extrabold text-lg text-slate-900 dark:text-white">Semantic Intent Routing</div>
-                <p class="text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed font-normal">Deterministic vector matching with sub-5ms localized caching.</p>
+                <div class="font-extrabold text-base sm:text-lg text-slate-900 dark:text-white">Semantic Intent Routing</div>
+                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed font-normal">Deterministic vector matching with sub-5ms localized caching.</p>
               </div>
 
-              <div id="step-3" class="p-6 rounded-2xl bg-slate-50 dark:bg-[#090d16] border border-slate-200 dark:border-surface-border transition-all duration-300">
-                <div class="flex items-center justify-between mb-3.5">
+              <div id="step-3" class="p-5 sm:p-6 rounded-2xl bg-slate-50 dark:bg-[#090d16] border border-slate-200 dark:border-surface-border transition-all duration-300">
+                <div class="flex items-center justify-between mb-3">
                   <span class="text-xs sm:text-sm font-mono text-slate-500 dark:text-slate-400 font-bold">STEP 03</span>
                   <span id="step-3-status" class="text-xs sm:text-sm font-mono text-slate-500 dark:text-slate-400 font-bold">Standby</span>
                 </div>
-                <div class="font-extrabold text-lg text-slate-900 dark:text-white">Tool Action & Verification</div>
-                <p class="text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed font-normal">Dispatches cryptographically signed payloads with strict validation.</p>
+                <div class="font-extrabold text-base sm:text-lg text-slate-900 dark:text-white">Tool Action & Verification</div>
+                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed font-normal">Dispatches cryptographically signed payloads with strict validation.</p>
               </div>
             </div>
 
             <!-- Terminal Output -->
-            <div class="rounded-2xl bg-[#060810] p-5 sm:p-6 border border-slate-800 dark:border-surface-border font-mono text-sm text-slate-300 h-48 overflow-y-auto space-y-2.5" id="console-logs">
+            <div class="rounded-2xl bg-[#060810] p-4 sm:p-6 border border-slate-800 dark:border-surface-border font-mono text-xs sm:text-sm text-slate-300 h-44 sm:h-48 overflow-y-auto space-y-2" id="console-logs">
               <div class="text-slate-400 font-medium">> AcdyOn AgentOS Core Runtime v2.4 initialized.</div>
               <div class="text-brand-accent font-semibold">> System ready. Click "Execute Workflow" above to inspect the pipeline telemetry.</div>
             </div>
@@ -265,156 +265,116 @@
       </section>
 
       <!-- LIVE VECTOR STRESS-TEST MATRIX -->
-      <section id="stress-test" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div class="p-8 sm:p-10 rounded-3xl bg-white dark:bg-surface-card border border-slate-200 dark:border-surface-border shadow-xl transition-colors duration-300">
+      <section id="stress-test" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 scroll-mt-24">
+        <div class="p-6 sm:p-10 rounded-3xl bg-white dark:bg-surface-card border border-slate-200 dark:border-surface-border shadow-xl transition-colors duration-300">
           <div class="max-w-3xl mb-8">
-            <span class="text-xs sm:text-sm font-mono font-bold uppercase tracking-wider text-brand-600 dark:text-brand-accent px-3.5 py-1 rounded-md bg-indigo-50 dark:bg-brand-500/15 border border-indigo-200 dark:border-brand-500/30">Interactive Simulator</span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-3">Dynamic Vector Mitigation Playground</h2>
-            <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 mt-2">Toggle real-world platform defense mechanisms below to observe live mitigation and recovery rules.</p>
+            <span class="text-xs sm:text-sm font-mono font-bold uppercase tracking-wider text-brand-600 dark:text-brand-accent px-3 py-1 rounded-md bg-indigo-50 dark:bg-brand-500/15 border border-indigo-200 dark:border-brand-500/30">Interactive Simulator</span>
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-3">Dynamic Vector Mitigation Playground</h2>
+            <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2">Toggle real-world platform defense mechanisms below to observe live mitigation and recovery rules.</p>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div onclick="toggleVector('headless')" id="vec-headless" class="cursor-pointer p-6 rounded-2xl bg-slate-50 dark:bg-[#0e1424] border-2 border-emerald-500/60 hover:border-emerald-400 md:hover:scale-[1.03] md:hover:-translate-y-1.5 md:hover:shadow-lg transition-all duration-300">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+            <div onclick="toggleVector('headless')" id="vec-headless" class="cursor-pointer p-5 sm:p-6 rounded-2xl bg-slate-50 dark:bg-[#0e1424] border-2 border-emerald-500/60 hover:border-emerald-400 md:hover:scale-[1.02] transition-all duration-300">
               <div class="flex items-center justify-between mb-4">
-                <i data-lucide="fingerprint" class="w-7 h-7 text-brand-600 dark:text-brand-accent"></i>
+                <i data-lucide="fingerprint" class="w-6 h-6 text-brand-600 dark:text-brand-accent"></i>
                 <span id="badge-headless" class="text-xs sm:text-sm font-mono px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 font-bold">ACTIVE</span>
               </div>
-              <h3 class="font-extrabold text-lg sm:text-xl text-slate-900 dark:text-white">TLS & Canvas Masking</h3>
-              <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">Emulates real Chrome WebGL/AudioContext profiles.</p>
-              <div class="mt-5 pt-3.5 border-t border-slate-200 dark:border-surface-border/80 text-xs sm:text-sm font-mono text-emerald-600 dark:text-emerald-400 font-bold">Entropy Score: 0.94 (Optimal)</div>
+              <h3 class="font-extrabold text-base sm:text-xl text-slate-900 dark:text-white">TLS & Canvas Masking</h3>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">Emulates real Chrome WebGL/AudioContext profiles.</p>
+              <div class="mt-4 pt-3 border-t border-slate-200 dark:border-surface-border/80 text-xs sm:text-sm font-mono text-emerald-600 dark:text-emerald-400 font-bold">Entropy Score: 0.94 (Optimal)</div>
             </div>
 
-            <div onclick="toggleVector('jitter')" id="vec-jitter" class="cursor-pointer p-6 rounded-2xl bg-slate-50 dark:bg-[#0e1424] border-2 border-emerald-500/60 hover:border-emerald-400 md:hover:scale-[1.03] md:hover:-translate-y-1.5 md:hover:shadow-lg transition-all duration-300">
+            <div onclick="toggleVector('jitter')" id="vec-jitter" class="cursor-pointer p-5 sm:p-6 rounded-2xl bg-slate-50 dark:bg-[#0e1424] border-2 border-emerald-500/60 hover:border-emerald-400 md:hover:scale-[1.02] transition-all duration-300">
               <div class="flex items-center justify-between mb-4">
-                <i data-lucide="clock" class="w-7 h-7 text-emerald-600 dark:text-emerald-400"></i>
+                <i data-lucide="clock" class="w-6 h-6 text-emerald-600 dark:text-emerald-400"></i>
                 <span id="badge-jitter" class="text-xs sm:text-sm font-mono px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 font-bold">ACTIVE</span>
               </div>
-              <h3 class="font-extrabold text-lg sm:text-xl text-slate-900 dark:text-white">Poisson Pacing Jitter</h3>
-              <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">Introduces stochastic delay variance to prevent 429 locks.</p>
-              <div class="mt-5 pt-3.5 border-t border-slate-200 dark:border-surface-border/80 text-xs sm:text-sm font-mono text-emerald-600 dark:text-emerald-400 font-bold">Pacing Variance: ±140ms</div>
+              <h3 class="font-extrabold text-base sm:text-xl text-slate-900 dark:text-white">Poisson Pacing Jitter</h3>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">Introduces stochastic delay variance to prevent 429 locks.</p>
+              <div class="mt-4 pt-3 border-t border-slate-200 dark:border-surface-border/80 text-xs sm:text-sm font-mono text-emerald-600 dark:text-emerald-400 font-bold">Pacing Variance: ±140ms</div>
             </div>
 
-            <div onclick="toggleVector('dom')" id="vec-dom" class="cursor-pointer p-6 rounded-2xl bg-slate-50 dark:bg-[#0e1424] border-2 border-emerald-500/60 hover:border-emerald-400 md:hover:scale-[1.03] md:hover:-translate-y-1.5 md:hover:shadow-lg transition-all duration-300">
+            <div onclick="toggleVector('dom')" id="vec-dom" class="cursor-pointer p-5 sm:p-6 rounded-2xl bg-slate-50 dark:bg-[#0e1424] border-2 border-emerald-500/60 hover:border-emerald-400 md:hover:scale-[1.02] transition-all duration-300">
               <div class="flex items-center justify-between mb-4">
-                <i data-lucide="git-merge" class="w-7 h-7 text-purple-600 dark:text-purple-400"></i>
+                <i data-lucide="git-merge" class="w-6 h-6 text-purple-600 dark:text-purple-400"></i>
                 <span id="badge-dom" class="text-xs sm:text-sm font-mono px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 font-bold">ACTIVE</span>
               </div>
-              <h3 class="font-extrabold text-lg sm:text-xl text-slate-900 dark:text-white">Semantic Tree Fallback</h3>
-              <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">Recovers instantly when platforms change CSS class names.</p>
-              <div class="mt-5 pt-3.5 border-t border-slate-200 dark:border-surface-border/80 text-xs sm:text-sm font-mono text-emerald-600 dark:text-emerald-400 font-bold">Schema Drift: Auto-Recovered</div>
+              <h3 class="font-extrabold text-base sm:text-xl text-slate-900 dark:text-white">Semantic Tree Fallback</h3>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">Recovers instantly when platforms change CSS class names.</p>
+              <div class="mt-4 pt-3 border-t border-slate-200 dark:border-surface-border/80 text-xs sm:text-sm font-mono text-emerald-600 dark:text-emerald-400 font-bold">Schema Drift: Auto-Recovered</div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- INTERACTIVE CALCULATOR SECTION -->
-      <section id="calculator" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="p-8 sm:p-10 rounded-3xl bg-white dark:bg-surface-card border border-slate-200 dark:border-surface-border shadow-xl transition-colors duration-300">
+      <section id="calculator" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 scroll-mt-24">
+        <div class="p-6 sm:p-10 rounded-3xl bg-white dark:bg-surface-card border border-slate-200 dark:border-surface-border shadow-xl transition-colors duration-300">
           <div class="text-center max-w-xl mx-auto mb-8">
             <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">Interactive Throughput Estimator</h2>
-            <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 font-normal">Adjust monthly execution volume to preview deterministic response latency and compute cost savings.</p>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 font-normal">Adjust monthly volume to preview deterministic response latency and compute cost savings.</p>
           </div>
 
-          <div class="space-y-8 max-w-xl mx-auto">
+          <div class="space-y-6 sm:space-y-8 max-w-xl mx-auto">
             <div>
-              <div class="flex justify-between text-sm sm:text-base font-mono text-slate-700 dark:text-slate-200 mb-3">
-                <span class="font-semibold">Monthly Agent Executions:</span>
-                <span id="calc-volume" class="text-brand-600 dark:text-brand-accent font-bold text-lg">250,000</span>
+              <div class="flex justify-between text-xs sm:text-base font-mono text-slate-700 dark:text-slate-200 mb-3">
+                <span class="font-semibold">Monthly Executions:</span>
+                <span id="calc-volume" class="text-brand-600 dark:text-brand-accent font-bold text-base sm:text-lg">250,000</span>
               </div>
               <input type="range" id="volume-slider" min="50000" max="1000000" step="25000" value="250000" class="w-full accent-indigo-600 dark:accent-indigo-500 cursor-pointer h-2.5 bg-slate-200 dark:bg-slate-700 rounded-lg">
             </div>
 
-            <div class="grid grid-cols-2 gap-6 pt-6 border-t border-slate-200 dark:border-surface-border">
-              <div class="p-6 rounded-2xl bg-slate-50 dark:bg-[#090d16] border border-slate-200 dark:border-surface-border text-center shadow-sm">
-                <div class="text-xs sm:text-sm uppercase tracking-wider text-slate-500 dark:text-slate-400 font-bold">Response Latency</div>
-                <div id="calc-latency" class="text-3xl font-extrabold font-mono text-emerald-600 dark:text-emerald-400 mt-2">1.82 ms</div>
+            <div class="grid grid-cols-2 gap-4 sm:gap-6 pt-6 border-t border-slate-200 dark:border-surface-border">
+              <div class="p-4 sm:p-6 rounded-2xl bg-slate-50 dark:bg-[#090d16] border border-slate-200 dark:border-surface-border text-center shadow-sm">
+                <div class="text-[11px] sm:text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 font-bold">Latency</div>
+                <div id="calc-latency" class="text-2xl sm:text-3xl font-extrabold font-mono text-emerald-600 dark:text-emerald-400 mt-1.5">1.82 ms</div>
               </div>
-              <div class="p-6 rounded-2xl bg-slate-50 dark:bg-[#090d16] border border-slate-200 dark:border-surface-border text-center shadow-sm">
-                <div class="text-xs sm:text-sm uppercase tracking-wider text-slate-500 dark:text-slate-400 font-bold">Cost Efficiency</div>
-                <div id="calc-savings" class="text-3xl font-extrabold font-mono text-brand-600 dark:text-brand-accent mt-2">84.2%</div>
+              <div class="p-4 sm:p-6 rounded-2xl bg-slate-50 dark:bg-[#090d16] border border-slate-200 dark:border-surface-border text-center shadow-sm">
+                <div class="text-[11px] sm:text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 font-bold">Cost Savings</div>
+                <div id="calc-savings" class="text-2xl sm:text-3xl font-extrabold font-mono text-brand-600 dark:text-brand-accent mt-1.5">84.2%</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ARCHITECTURE SECTION -->
-      <section id="architecture" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-200 dark:border-surface-border">
-        <div class="text-center max-w-2xl mx-auto mb-14">
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">Engineered for Unforgiving Workloads</h2>
-          <p class="mt-3.5 text-base sm:text-lg text-slate-600 dark:text-slate-300">Zero synthetic bloat. Designed to ensure autonomous agent actions never fail silently.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="group p-8 rounded-3xl bg-white dark:bg-surface-card border border-slate-200 dark:border-surface-border hover:border-brand-500/60 md:hover:scale-[1.03] md:hover:-translate-y-2 md:hover:shadow-xl transition-all duration-300">
-            <div class="w-14 h-14 rounded-2xl bg-indigo-50 dark:bg-brand-500/15 border border-indigo-200 dark:border-brand-500/30 flex items-center justify-center text-brand-600 dark:text-brand-accent mb-6 group-hover:scale-110 transition-transform">
-              <i data-lucide="shield-alert" class="w-7 h-7"></i>
-            </div>
-            <h3 class="text-xl font-extrabold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-accent transition-colors">Stealth Ingestion Layer</h3>
-            <p class="text-base text-slate-600 dark:text-slate-300 mt-3.5 leading-relaxed font-normal">
-              Handles TLS fingerprint rotation, Poisson pacing jitter, and dynamic DOM parsing so agents can collect data without getting blocked.
-            </p>
-          </div>
-
-          <div class="group p-8 rounded-3xl bg-white dark:bg-surface-card border border-slate-200 dark:border-surface-border hover:border-emerald-500/60 md:hover:scale-[1.03] md:hover:-translate-y-2 md:hover:shadow-xl transition-all duration-300">
-            <div class="w-14 h-14 rounded-2xl bg-emerald-50 dark:bg-emerald-500/15 border border-emerald-200 dark:border-emerald-500/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 mb-6 group-hover:scale-110 transition-transform">
-              <i data-lucide="cpu" class="w-7 h-7"></i>
-            </div>
-            <h3 class="text-xl font-extrabold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Deterministic Tool Calling</h3>
-            <p class="text-base text-slate-600 dark:text-slate-300 mt-3.5 leading-relaxed font-normal">
-              Strict schema-enforced validation prevents hallucinated API arguments and enforces safe execution boundaries.
-            </p>
-          </div>
-
-          <div class="group p-8 rounded-3xl bg-white dark:bg-surface-card border border-slate-200 dark:border-surface-border hover:border-purple-500/60 md:hover:scale-[1.03] md:hover:-translate-y-2 md:hover:shadow-xl transition-all duration-300">
-            <div class="w-14 h-14 rounded-2xl bg-purple-50 dark:bg-purple-500/15 border border-purple-200 dark:border-purple-500/30 flex items-center justify-center text-purple-600 dark:text-purple-400 mb-6 group-hover:scale-110 transition-transform">
-              <i data-lucide="zap" class="w-7 h-7"></i>
-            </div>
-            <h3 class="text-xl font-extrabold text-slate-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">Sub-5ms Edge Cache</h3>
-            <p class="text-base text-slate-600 dark:text-slate-300 mt-3.5 leading-relaxed font-normal">
-              Locally cached semantic embeddings prevent redundant LLM inference calls, reducing operating costs by over 80%.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============ FLIGHT MANIFEST / EARLY ACCESS WAITLIST ============ -->
-      <section id="register" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div class="relative p-8 sm:p-12 rounded-3xl bg-white dark:bg-surface-card border border-slate-200 dark:border-surface-border shadow-2xl overflow-hidden text-center transition-colors duration-300">
+      <!-- FLIGHT MANIFEST WAITLIST -->
+      <section id="register" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 scroll-mt-24">
+        <div class="relative p-6 sm:p-12 rounded-3xl bg-white dark:bg-surface-card border border-slate-200 dark:border-surface-border shadow-2xl overflow-hidden text-center transition-colors duration-300">
           
-          <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[550px] h-[260px] bg-indigo-500/15 dark:bg-brand-500/20 blur-[110px] rounded-full pointer-events-none"></div>
+          <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-full max-w-[450px] h-[220px] bg-indigo-500/15 dark:bg-brand-500/20 blur-[100px] rounded-full pointer-events-none"></div>
 
           <div class="relative z-10">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 dark:bg-[#070b14] border border-slate-200 dark:border-slate-800 text-xs font-mono text-slate-600 dark:text-slate-300 mb-6 shadow-sm">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-[#070b14] border border-slate-200 dark:border-slate-800 text-xs font-mono text-slate-600 dark:text-slate-300 mb-5 sm:mb-6 shadow-sm">
               <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
               <span>Early access rolls out in waves</span>
             </div>
 
-            <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
+            <h2 class="text-2xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
               Get on the flight manifest.
             </h2>
 
-            <p class="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-xl mx-auto leading-relaxed">
+            <p class="mt-3.5 sm:mt-4 text-sm sm:text-lg text-slate-600 dark:text-slate-300 max-w-xl mx-auto leading-relaxed">
               Register once — we'll ping you the moment your runtime slot opens. No spam, no fake reviews, just a runtime.
             </p>
 
-            <form id="register-form" class="mt-8 flex flex-col sm:flex-row gap-3 max-w-lg mx-auto" novalidate>
+            <form id="register-form" class="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 max-w-lg mx-auto w-full" novalidate>
               <label for="register-email" class="sr-only">Work email</label>
               <input id="register-email" type="email" required placeholder="you@company.com"
-                class="flex-grow px-5 py-3.5 rounded-2xl bg-slate-50 dark:bg-[#060810] border border-slate-200 dark:border-[#1c2642] text-sm text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition shadow-inner">
-              <button type="submit" id="register-btn" class="inline-flex items-center justify-center px-7 py-3.5 rounded-2xl text-sm font-bold text-white bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 shadow-lg shadow-brand-600/30 transition-all duration-200 whitespace-nowrap hover:-translate-y-0.5 border border-brand-400/20">
+                class="w-full sm:flex-grow px-4 sm:px-5 py-3.5 rounded-2xl bg-slate-50 dark:bg-[#060810] border border-slate-200 dark:border-[#1c2642] text-sm text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition shadow-inner">
+              <button type="submit" id="register-btn" class="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-7 py-3.5 rounded-2xl text-sm font-bold text-white bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 shadow-lg shadow-brand-600/30 transition-all duration-200 whitespace-nowrap hover:-translate-y-0.5 border border-brand-400/20">
                 Reserve My Slot
               </button>
             </form>
             
             <p id="register-error" class="hidden mt-3 text-xs text-rose-500 font-mono font-medium">Please enter a valid email address to reserve your slot.</p>
 
-            <div id="register-success" class="hidden mt-8 flex flex-col items-center gap-2.5">
+            <div id="register-success" class="hidden mt-6 sm:mt-8 flex flex-col items-center gap-2.5">
               <div class="w-12 h-12 rounded-full bg-emerald-500/20 border border-emerald-500/50 flex items-center justify-center text-emerald-500 shadow-lg shadow-emerald-500/20">
                 <i data-lucide="check" class="w-6 h-6 stroke-[3]"></i>
               </div>
-              <p class="text-lg font-bold text-slate-900 dark:text-white">You're queued — position confirmed.</p>
-              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-mono">Watch <span id="register-email-echo" class="text-brand-600 dark:text-brand-accent font-bold"></span> for your deployment credentials.</p>
+              <p class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">You're queued — position confirmed.</p>
+              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-mono">Watch <span id="register-email-echo" class="text-brand-600 dark:text-brand-accent font-bold"></span> for deployment credentials.</p>
             </div>
 
           </div>
@@ -423,20 +383,20 @@
 
       <!-- Easter Egg Modal -->
       <div id="easter-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
-        <div class="bg-white dark:bg-surface-card border border-slate-200 dark:border-brand-500/40 rounded-3xl p-7 max-w-md w-full shadow-2xl">
+        <div class="bg-white dark:bg-surface-card border border-slate-200 dark:border-brand-500/40 rounded-3xl p-6 sm:p-7 max-w-md w-full shadow-2xl">
           <div class="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-surface-border">
             <div class="flex items-center gap-2.5 text-brand-600 dark:text-brand-accent font-mono text-sm font-bold">
               <i data-lucide="terminal" class="w-5 h-5"></i>
-              <span>AcdyOn Engineering Terminal</span>
+              <span>Engineering Terminal</span>
             </div>
             <button onclick="toggleEasterEgg()" class="text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white text-xl font-bold">&times;</button>
           </div>
-          <div class="mt-5 font-mono text-xs sm:text-sm text-slate-700 dark:text-slate-300 space-y-2.5">
+          <div class="mt-4 font-mono text-xs sm:text-sm text-slate-700 dark:text-slate-300 space-y-2">
             <p class="text-emerald-600 dark:text-emerald-400">> Secret Debug Channel Unlocked</p>
-            <p class="text-slate-800 dark:text-slate-300">> Submitted by: Piyush Raj (Frontend & AI Challenge)</p>
-            <p class="text-slate-500 dark:text-slate-400">> Features: Live Agent Simulator, Vector Playground, Throughput ROI Estimator.</p>
+            <p class="text-slate-800 dark:text-slate-300">> Candidate: Piyush Raj</p>
+            <p class="text-slate-500 dark:text-slate-400">> Core Engine: Pure HTML5/Tailwind/Canvas</p>
           </div>
-          <button onclick="toggleEasterEgg()" class="mt-6 w-full py-3 bg-brand-600 hover:bg-brand-500 text-white rounded-xl text-sm font-semibold transition">
+          <button onclick="toggleEasterEgg()" class="mt-5 w-full py-3 bg-brand-600 hover:bg-brand-500 text-white rounded-xl text-sm font-semibold transition">
             Close Terminal
           </button>
         </div>
@@ -445,32 +405,32 @@
     </main>
 
     <!-- Sticky Floating Action Dock -->
-    <div id="floating-dock" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-40 w-[92%] max-w-2xl group transition-all duration-300 transform translate-y-0 opacity-100">
-      <div class="p-3.5 sm:px-6 sm:py-4 rounded-2xl bg-slate-900/95 dark:bg-[#0f1527]/95 border border-slate-700/80 dark:border-[#232f4e] backdrop-blur-2xl shadow-2xl shadow-black/70 flex items-center justify-between gap-3 transition-all duration-300 hover:border-brand-accent/60">
-        <div class="flex items-center gap-3">
-          <span class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_10px_rgba(52,211,153,0.8)]"></span>
+    <div id="floating-dock" class="fixed bottom-4 sm:bottom-5 left-1/2 -translate-x-1/2 z-40 w-[94%] max-w-2xl group transition-all duration-300">
+      <div class="p-3 sm:px-6 sm:py-4 rounded-2xl bg-slate-900/95 dark:bg-[#0f1527]/95 border border-slate-700/80 dark:border-[#232f4e] backdrop-blur-2xl shadow-2xl flex items-center justify-between gap-2 sm:gap-3 transition-all duration-300">
+        <div class="flex items-center gap-2.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse flex-shrink-0"></span>
           <div>
-            <div class="text-xs sm:text-sm font-bold text-white group-hover:text-brand-accent transition-colors">Ready to execute?</div>
-            <div class="text-[11px] text-slate-300 font-mono hidden sm:block">Reserve your early runtime slot</div>
+            <div class="text-xs sm:text-sm font-bold text-white">Ready to execute?</div>
+            <div class="text-[10px] sm:text-[11px] text-slate-300 font-mono hidden sm:block">Reserve runtime slot</div>
           </div>
         </div>
-        <div class="flex items-center gap-2 sm:gap-3">
-          <button onclick="triggerSimulatedRun()" class="px-3.5 py-2 rounded-xl bg-[#161f36] hover:bg-[#1f2b4a] hover:border-indigo-400 hover:text-white text-slate-200 text-xs sm:text-sm font-semibold border border-[#232f4e] transition-all duration-200 flex items-center gap-1.5">
-            <i data-lucide="play" class="w-3.5 h-3.5 fill-white"></i>
-            <span class="hidden sm:inline">Test Run</span>
+        <div class="flex items-center gap-2">
+          <button onclick="triggerSimulatedRun()" class="px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl bg-[#161f36] hover:bg-[#1f2b4a] hover:border-indigo-400 hover:text-white text-slate-200 text-xs font-semibold border border-[#232f4e] transition-all duration-200 flex items-center gap-1.5">
+            <i data-lucide="play" class="w-3 h-3 fill-white"></i>
+            <span>Test Run</span>
           </button>
-          <a href="#register" class="px-4 py-2 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-xs sm:text-sm font-bold shadow-md transition-all duration-200 hover:-translate-y-0.5">
+          <a href="#register" class="px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-xs font-bold shadow-md transition-all duration-200 hover:-translate-y-0.5">
             Register
           </a>
         </div>
       </div>
     </div>
 
-    <!-- Inverted High-Contrast Adaptive Footer -->
-    <footer id="site-footer" class="w-full bg-[#0b0f19] text-white dark:bg-[#f8fafc] dark:text-slate-900 border-t border-[#1e293b] dark:border-slate-200 py-6 m-0 relative z-30 shadow-2xl transition-colors duration-300">
-      <div class="w-full px-6 sm:px-10 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
+    <!-- Inverted Footer (Edge-to-Edge Responsive) -->
+    <footer id="site-footer" class="w-full max-w-full bg-[#0b0f19] text-white dark:bg-[#f8fafc] dark:text-slate-900 border-t border-[#1e293b] dark:border-slate-200 py-6 m-0 relative z-30 shadow-2xl transition-colors duration-300 overflow-x-hidden">
+      <div class="w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
         
-        <!-- Left Corner: Candidate Identity & Auditing Tag -->
+        <!-- Identity -->
         <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-xs font-mono text-slate-400 dark:text-slate-600 text-center md:text-left">
           <div class="flex items-center justify-center md:justify-start gap-2">
             <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 dark:bg-emerald-500 shadow-sm animate-pulse"></span>
@@ -481,30 +441,25 @@
           <span class="text-slate-400 dark:text-slate-500 font-medium">Viewport Audited: 390px & 1440px</span>
         </div>
 
-        <!-- Right Corner: Circular Social Badges -->
+        <!-- Social Badges -->
         <div class="flex items-center justify-center gap-3">
-          
-          <!-- Gmail Web Compose -->
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=piyushmgr79@gmail.com" target="_blank" rel="noopener noreferrer" title="Send Email (piyushmgr79@gmail.com)" class="w-10 h-10 rounded-full bg-white/10 dark:bg-white border border-white/20 dark:border-slate-300 hover:border-indigo-400 dark:hover:border-indigo-500 flex items-center justify-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 group">
-            <svg class="w-4 h-4 text-slate-200 dark:text-slate-700 group-hover:text-indigo-400 dark:group-hover:text-indigo-600 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=piyushmgr79@gmail.com" target="_blank" rel="noopener noreferrer" title="Send Email" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 dark:bg-white border border-white/20 dark:border-slate-300 hover:border-indigo-400 flex items-center justify-center shadow-sm transition-all duration-200">
+            <svg class="w-4 h-4 text-slate-200 dark:text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
           </a>
 
-          <!-- GitHub Profile -->
-          <a href="https://github.com/piyushraj111" target="_blank" rel="noopener noreferrer" title="GitHub Profile (@piyushraj111)" class="w-10 h-10 rounded-full bg-white/10 dark:bg-white border border-white/20 dark:border-slate-300 hover:border-emerald-400 dark:hover:border-emerald-600 flex items-center justify-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 group">
-            <svg class="w-4 h-4 fill-slate-200 dark:fill-slate-700 group-hover:fill-emerald-400 dark:group-hover:fill-emerald-600 transition-colors" viewBox="0 0 24 24">
+          <a href="https://github.com/piyushraj111" target="_blank" rel="noopener noreferrer" title="GitHub Profile" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 dark:bg-white border border-white/20 dark:border-slate-300 hover:border-emerald-400 flex items-center justify-center shadow-sm transition-all duration-200">
+            <svg class="w-4 h-4 fill-slate-200 dark:fill-slate-700" viewBox="0 0 24 24">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
             </svg>
           </a>
 
-          <!-- LinkedIn Profile -->
-          <a href="https://www.linkedin.com/in/piyushraj111/" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile" class="w-10 h-10 rounded-full bg-white/10 dark:bg-white border border-white/20 dark:border-slate-300 hover:border-sky-400 dark:hover:border-[#0a66c2] flex items-center justify-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 group">
-            <svg class="w-4 h-4 fill-slate-200 dark:fill-slate-700 group-hover:fill-sky-400 dark:group-hover:fill-[#0a66c2] transition-colors" viewBox="0 0 24 24">
+          <a href="https://www.linkedin.com/in/piyushraj111/" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 dark:bg-white border border-white/20 dark:border-slate-300 hover:border-sky-400 flex items-center justify-center shadow-sm transition-all duration-200">
+            <svg class="w-4 h-4 fill-slate-200 dark:fill-slate-700" viewBox="0 0 24 24">
               <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
             </svg>
           </a>
-
         </div>
 
       </div>
@@ -525,12 +480,12 @@
       function resizeCanvas() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-        stars = Array.from({ length: 160 }, () => ({
+        stars = Array.from({ length: 140 }, () => ({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          size: Math.random() * 2.2 + 0.8,
+          size: Math.random() * 2 + 0.8,
           alpha: Math.random() * 0.45 + 0.55,
-          speed: Math.random() * 0.38 + 0.08,
+          speed: Math.random() * 0.35 + 0.08,
           darkColor: Math.random() > 0.35 ? '#ffffff' : (Math.random() > 0.5 ? '#818cf8' : '#38bdf8'),
           lightColor: Math.random() > 0.3 ? '#0f172a' : (Math.random() > 0.5 ? '#1e293b' : '#4338ca')
         }));
@@ -555,8 +510,8 @@
             s.x = Math.random() * canvas.width;
           }
 
-          let dx = (mouse.x - canvas.width / 2) * 0.012;
-          let dy = (mouse.y - canvas.height / 2) * 0.012;
+          let dx = (mouse.x - canvas.width / 2) * 0.01;
+          let dy = (mouse.y - canvas.height / 2) * 0.01;
 
           ctx.fillStyle = isDark ? s.darkColor : s.lightColor;
           ctx.globalAlpha = isDark ? s.alpha : Math.min(1, s.alpha * 1.15);
@@ -593,9 +548,15 @@
 
     updateThemeIcon();
 
-    // Live Agent Pipeline Simulator Logic
+    // Live Agent Pipeline Simulator Logic with Instant Auto-Scroll
     let isRunning = false;
     function triggerSimulatedRun() {
+      // Auto-scroll directly to the interactive suite
+      const suiteSection = document.getElementById('interactive-suite');
+      if (suiteSection) {
+        suiteSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+
       if (isRunning) return;
       isRunning = true;
 
@@ -615,7 +576,7 @@
       runIconWrapper.innerHTML = `
         <span class="relative flex items-center justify-center">
           <span class="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-sky-400 opacity-75"></span>
-          <span class="text-sm animate-bounce">🏃</span>
+          <span class="text-xs animate-bounce">🏃</span>
         </span>
       `;
       runText.innerHTML = `<span class="animate-pulse tracking-wide font-mono">Running (0/3)...</span>`;
@@ -624,34 +585,34 @@
 
       // Step 1 Execution
       setTimeout(() => {
-        s1.className = 'p-6 rounded-2xl bg-indigo-50/50 dark:bg-[#090d16] border-2 border-brand-500 shadow-xl shadow-brand-500/20 transition-all duration-300';
+        s1.className = 'p-5 sm:p-6 rounded-2xl bg-indigo-50/50 dark:bg-[#090d16] border-2 border-brand-500 shadow-xl shadow-brand-500/20 transition-all duration-300';
         s1Stat.innerHTML = `<span class="text-amber-500 dark:text-amber-400 font-bold">● Ingesting</span>`;
         runText.innerHTML = `<span class="animate-pulse tracking-wide font-mono">1/3 Ingesting...</span>`;
-        consoleLogs.innerHTML += `<div class="text-slate-200">[0.32s] Rotating TLS fingerprints & fetching remote job schema...</div>`;
+        consoleLogs.innerHTML += `<div class="text-slate-200">[0.32s] Rotating TLS fingerprints & fetching job schema...</div>`;
       }, 400);
 
       // Step 2 Execution
       setTimeout(() => {
         s1Stat.innerHTML = `<span class="text-emerald-600 dark:text-emerald-400 font-bold">✓ Parsed (100%)</span>`;
-        s2.className = 'p-6 rounded-2xl bg-indigo-50/50 dark:bg-[#090d16] border-2 border-brand-500 shadow-xl shadow-brand-500/20 transition-all duration-300';
+        s2.className = 'p-5 sm:p-6 rounded-2xl bg-indigo-50/50 dark:bg-[#090d16] border-2 border-brand-500 shadow-xl shadow-brand-500/20 transition-all duration-300';
         s2Stat.innerHTML = `<span class="text-amber-500 dark:text-amber-400 font-bold">● Routing</span>`;
         runText.innerHTML = `<span class="animate-pulse tracking-wide font-mono">2/3 Routing...</span>`;
-        consoleLogs.innerHTML += `<div class="text-slate-200">[0.84s] Semantic Vector Match: Match Confidence 99.4% -> Dispatched to Executive Dispatcher.</div>`;
+        consoleLogs.innerHTML += `<div class="text-slate-200">[0.84s] Vector Match 99.4% -> Dispatched to Executive Dispatcher.</div>`;
       }, 1200);
 
       // Step 3 Execution
       setTimeout(() => {
         s2Stat.innerHTML = `<span class="text-emerald-600 dark:text-emerald-400 font-bold">✓ Routed</span>`;
-        s3.className = 'p-6 rounded-2xl bg-indigo-50/50 dark:bg-[#090d16] border-2 border-brand-500 shadow-xl shadow-brand-500/20 transition-all duration-300';
+        s3.className = 'p-5 sm:p-6 rounded-2xl bg-indigo-50/50 dark:bg-[#090d16] border-2 border-brand-500 shadow-xl shadow-brand-500/20 transition-all duration-300';
         s3Stat.innerHTML = `<span class="text-amber-500 dark:text-amber-400 font-bold">● Executing</span>`;
         runText.innerHTML = `<span class="animate-pulse tracking-wide font-mono">3/3 Executing...</span>`;
-        consoleLogs.innerHTML += `<div class="text-slate-200">[1.45s] Tool Call: Validating HMAC auth token -> Action dispatched successfully.</div>`;
+        consoleLogs.innerHTML += `<div class="text-slate-200">[1.45s] Tool Call: Validating HMAC auth token -> Action dispatched.</div>`;
       }, 2000);
 
       // Finish & Reset
       setTimeout(() => {
         s3Stat.innerHTML = `<span class="text-emerald-600 dark:text-emerald-400 font-bold">✓ Verified (0.4ms)</span>`;
-        consoleLogs.innerHTML += `<div class="text-emerald-400 font-bold mt-2">[1.82s] >> Workflow execution completed with ZERO schema violations.</div>`;
+        consoleLogs.innerHTML += `<div class="text-emerald-400 font-bold mt-2">[1.82s] >> Execution completed with ZERO schema violations.</div>`;
         
         runBtn.classList.remove('border-brand-accent', 'bg-brand-500/20', 'text-brand-accent');
         runIconWrapper.innerHTML = `<i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>`;
@@ -668,11 +629,11 @@
       if (badge.innerText === 'ACTIVE') {
         badge.innerText = 'PAUSED';
         badge.className = 'text-xs sm:text-sm font-mono px-2.5 py-1 rounded bg-rose-500/20 text-rose-600 dark:text-rose-300 font-bold';
-        card.className = 'cursor-pointer p-6 rounded-2xl bg-slate-50 dark:bg-[#0e1424] border-2 border-rose-500/50 hover:border-rose-400 md:hover:scale-[1.03] md:hover:-translate-y-1.5 transition-all duration-300';
+        card.className = 'cursor-pointer p-5 sm:p-6 rounded-2xl bg-slate-50 dark:bg-[#0e1424] border-2 border-rose-500/50 hover:border-rose-400 transition-all duration-300';
       } else {
         badge.innerText = 'ACTIVE';
         badge.className = 'text-xs sm:text-sm font-mono px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 font-bold';
-        card.className = 'cursor-pointer p-6 rounded-2xl bg-slate-50 dark:bg-[#0e1424] border-2 border-emerald-500/60 hover:border-emerald-400 md:hover:scale-[1.03] md:hover:-translate-y-1.5 md:hover:shadow-lg transition-all duration-300';
+        card.className = 'cursor-pointer p-5 sm:p-6 rounded-2xl bg-slate-50 dark:bg-[#0e1424] border-2 border-emerald-500/60 hover:border-emerald-400 transition-all duration-300';
       }
     }
 
@@ -687,7 +648,7 @@
       document.getElementById('calc-savings').innerText = `${savings}%`;
     });
 
-    // Registration Form Submission Logic (Direct Email Forwarding)
+    // Registration Form Logic
     const registerForm = document.getElementById('register-form');
     if (registerForm) {
       registerForm.addEventListener('submit', async (e) => {
@@ -727,7 +688,7 @@
             })
           });
         } catch (err) {
-          console.warn('Form dispatched with local fallback:', err);
+          console.warn('Form dispatched with fallback:', err);
         }
 
         registerForm.classList.add('hidden');
